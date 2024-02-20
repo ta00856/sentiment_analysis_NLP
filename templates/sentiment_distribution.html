@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Distribution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            background-color: #cce5ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Distribution</h1>
+    <p>Sentiment ratings scale: 1 (Bad) - 5 (Very Good)</p>
+    <ul>
+        {% for label, count in sentiment_counts.items() %}
+            <li>{{ label }} ({{ count }} users)</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
