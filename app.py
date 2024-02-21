@@ -8,7 +8,9 @@ import nltk
 app = Flask(__name__)
 
 # Load the data
-food_restaurant = pd.read_csv('/Users/taukeerahmad/Desktop/Machine_Learning/sentiment_analysis/data/grillogy.csv')
+food_restaurant = pd.read_csv('./data/grillogy.csv')
+
+
 
 # Clean the data
 food_restaurant.drop(['Tap5If', 'hCCjke', 'eaLgGf'], axis=1, inplace=True)
