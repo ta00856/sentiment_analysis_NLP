@@ -83,4 +83,4 @@ def sentiment_distribution():
     return render_template('sentiment_distribution.html', sentiment_counts=sentiment_counts, labels=labels)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
