@@ -53,7 +53,7 @@ tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncase
 model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
 # Apply sentiment analysis
-food_restaurant['sentiment'] = food_restaurant['cleaned_reviews'].apply(lambda x: sentiment_score(x[:512]))
+food_restaurant['sentiment'] = food_restaurant['cleaned_reviews'].apply(lambda x: sentiment_score(x[:300]))
 
 # Split into positive and negative reviews
 positive_reviews_df = food_restaurant[food_restaurant['sentiment'] >= 3]
